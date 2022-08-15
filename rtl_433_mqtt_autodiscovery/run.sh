@@ -27,9 +27,7 @@ else
   else
     echo "Using an external mqtt broker."
     MQTT_HOST=$(bashio::config "mqtt_host")
-    echo "Host: $MQTT_HOST"
     MQTT_PORT=$(bashio::config "mqtt_port")
-    echo "Host: $MQTT_PORT"
     export MQTT_USERNAME=$(bashio::config "mqtt_user")
     export MQTT_PASSWORD=$(bashio::config "mqtt_password")
   fi
@@ -57,4 +55,4 @@ fi
 
 echo "Starting rtl_433_mqtt_hass.py..."
 echo "python3 -u /rtl_433_mqtt_hass.py -H $MQTT_HOST -p $MQTT_PORT -R "$RTL_TOPIC" -D "$DISCOVERY_PREFIX" -i $DISCOVERY_INTERVAL $OTHER_ARGS"
-python3 -u /rtl_433_mqtt_hass.py -H "core-mosquitto" -p 1883 -R "rtl_433/+/events" -D "homeassistant" -i 596 $OTHER_ARGS
+python3 -u /rtl_433_mqtt_hass.py -H $MQTT_HOST -p $MQTT_PORT -R "$RTL_TOPIC" -D "$DISCOVERY_PREFIX" -i $DISCOVERY_INTERVAL $OTHER_ARGS
