@@ -28,8 +28,10 @@ else
     echo "Using an external mqtt broker."
     MQTT_HOST=$(bashio::config "mqtt_host")
     MQTT_PORT=$(bashio::config "mqtt_port")
-    export MQTT_USERNAME=$(bashio::config "mqtt_user")
-    export MQTT_PASSWORD=$(bashio::config "mqtt_password")
+  #  export MQTT_USERNAME=$(bashio::config "mqtt_user")
+  #  export MQTT_PASSWORD=$(bashio::config "mqtt_password")
+    export MQTT_USERNAME="mqtt"
+    export MQTT_PASSWORD="rtl345!"
   fi
 
   RTL_TOPIC=$(bashio::config "rtl_topic")
