@@ -408,7 +408,7 @@
         "config": {
            "automation_type": "trigger",
            "type": "button_short_release",
-           "subtype": "button_1",
+           "subtype": "button_1"
         }
     },
     "button": {
@@ -417,7 +417,7 @@
         "config": {
            "automation_type": "trigger",
            "type": "button_short_release",
-           "subtype": "button_1",
+           "subtype": "button_1"
         }
     },
     "code": {
@@ -426,7 +426,7 @@
         "config": {
            "automation_type": "trigger",
            "type": "button_short_release",
-           "subtype": "button_1",
+           "subtype": "button_1"
         }
     },
     "unit": {
@@ -435,7 +435,7 @@
         "config": {
            "automation_type": "trigger",
            "type": "button_short_release",
-           "subtype": "button_1",
+           "subtype": "button_1"
         }
     },
     "tristate": {
@@ -444,7 +444,7 @@
         "config": {
            "automation_type": "trigger",
            "type": "button_short_release",
-           "subtype": "button_1",
+           "subtype": "button_1"
         }
     },
     "cmd": {
@@ -453,7 +453,7 @@
         "config": {
            "automation_type": "trigger",
            "type": "button_short_release",
-           "subtype": "button_1",
+           "subtype": "button_1"
         }
     },
     "on": {
