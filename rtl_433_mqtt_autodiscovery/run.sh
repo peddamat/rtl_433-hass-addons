@@ -25,15 +25,22 @@ else
   else
     echo "Using an external mqtt broker."
     MQTT_HOST=$(bashio::config "mqtt_host")
+    echo "Using an external mqtt broker."
     MQTT_PORT=$(bashio::config "mqtt_port")
+    echo "Using an external mqtt broker."
     export MQTT_USERNAME=$(bashio::config "mqtt_user")
+    echo "Using an external mqtt broker."
     export MQTT_PASSWORD=$(bashio::config "mqtt_password")
   fi
 
+  echo "Using an external mqtt broker."
   RTL_TOPIC=$(bashio::config "rtl_topic")
+  echo "Using an external mqtt broker."
   DISCOVERY_PREFIX=$(bashio::config "discovery_prefix")
+  echo "Using an external mqtt broker."
   DISCOVERY_INTERVAL=$(bashio::config "discovery_interval")
 
+  echo "Using an external mqtt broker."
   OTHER_ARGS=""
   if bashio::config.true "mqtt_retain"; then
     OTHER_ARGS="${OTHER_ARGS} --retain"
@@ -42,6 +49,7 @@ else
     OTHER_ARGS="${OTHER_ARGS} --force_update"
   fi
 
+  echo "Using an external mqtt broker."
   LOG_LEVEL=$(bashio::config "log_level")
   if [[ $LOG_LEVEL == "quiet" ]]; then
     OTHER_ARGS="${OTHER_ARGS} --quiet"
